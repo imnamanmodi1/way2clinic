@@ -11,7 +11,7 @@ var doctorSchema = new Schema({
     email:{
         type: String,
         //required: true,
-        unique: true
+        // unique: true
     },
     password:{
         type: String,
@@ -28,7 +28,7 @@ var doctorSchema = new Schema({
     medicalId:{
         type: Number,
         //required: true,
-        unique: true
+        // unique: true
     },
     image: {
       type: String
