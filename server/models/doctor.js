@@ -29,6 +29,24 @@ var doctorSchema = new Schema({
         unique: true
     },
     image: Image,
+    clinicAddress:{
+        type: String,
+        required: true
+    },
+    Location:{
+        type: String,
+        required: true
+    },
+    latitude:{
+        type: Number
+    },
+    longitude:{
+        type: Number
+    },
+    city:{
+        type: String,
+        required: true,
+    }
 },{timestamps: true});
 
 doctorSchema.pre('save', function (next) {
