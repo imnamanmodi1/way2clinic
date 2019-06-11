@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import DocLogin from './DocLogin'
-import 'tachyons';
+// import 'tachyons';
 
 class App extends Component {
   render() {
