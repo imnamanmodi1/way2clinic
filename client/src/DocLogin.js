@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import tachyons from 'tachyons'
+import 'tachyons'
 
-class DocRegister extends Component {
+class DocLogin extends Component {
     render() {
         return (
             <>
@@ -33,4 +33,4 @@ class DocRegister extends Component {
     }
 }
 
-export default DocRegister
+export default DocLogin
