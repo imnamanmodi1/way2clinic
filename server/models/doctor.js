@@ -56,4 +56,4 @@ doctorSchema.pre('save', function (next) {
 })
 
 var Doctor = mongoose.model('Doctor', doctorSchema);
-module.exports = Doctor;
+module.exports = Doctor; 
