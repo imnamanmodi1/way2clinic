@@ -29,7 +29,6 @@ var doctorSchema = new Schema({
         required: true,
         unique: true
     },
-    image: Image,
     clinicAddress:{
         type: String,
         required: true

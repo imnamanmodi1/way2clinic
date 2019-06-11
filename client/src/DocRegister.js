@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import tachyons from 'tachyons'
+import 'tachyons'
 
 class DocRegister extends Component {
     render() {
