@@ -6,6 +6,37 @@ const saltRounds = 10;
 var doctorSchema = new Schema({
     name:{
         type: String,
+        required: true,
+    },
+    email:{
+        type: String,
+        required: true,
+        unique: true
+    },
+    password:{
+        type: String,
+        required: true,
+    },
+    degree:{
+        type: String,
+        required: true,
+    },
+    specialisation:{
+        type: String,
+        required: true,
+    },
+    medicalId:{
+        required: true,
+        unique: true
+    },
+    image: Image,
+    clinicAddress:{
+        type: String,
+        required: true
+    },
+    Location:{
+        type: String,
+        required: true
         //required: true,
     },
     email:{
