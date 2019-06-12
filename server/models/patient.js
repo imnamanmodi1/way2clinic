@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var bcrypt = require('bcrypt');
-
-
+var bcrypt = require('bcryptjs');
 
 var patientSchema = new Schema({
     name:{
@@ -13,7 +11,9 @@ var patientSchema = new Schema({
         type: String,
         required: true
     },
-    image: Image,
+    image: {
+        type: String
+    },
     mobileNumber:Number,
     password:{
         type: String,
@@ -30,7 +30,3 @@ patientSchema.pre('save', function (next) {
 
 var Patient = mongoose.model("Patient", patientSchema);
 module.exports = Patient;
-
-
-
-
