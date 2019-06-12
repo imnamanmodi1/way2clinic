@@ -20,4 +20,9 @@ router.get('/auth/google/callback',
     })
   }
 )
-module.exports = router;
+
+router.get('/doctor/login', (err, res)=>{
+  res.render('index');
+})
+
+module.exports =router;

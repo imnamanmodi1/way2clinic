@@ -77,8 +77,7 @@ app.use(passport.session());
 // importing passport config
 require('./server/config/passport')(passport);
 
-app.use("/api", require("./server/routes/api"));
-// app.use("/api", require("./server/routes/api"));
+// calling routes
 app.use('/api/v1', apiRouter);
 app.use(require("./server/routes/index"));
 app.use('/doctor', doctor);
