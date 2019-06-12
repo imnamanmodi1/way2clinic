@@ -6,6 +6,7 @@ const MongoStore = require("connect-mongo")(session);
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
+const passport = require("passport");
 const logger = require('morgan');
 var jwt = require('jsonwebtoken');
 const doctor = require('./server/routes/doctor')
@@ -69,7 +70,14 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(cors());
 
-// app.use("/api", require("./server/routes/api"));
+// applying passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// importing passport config
+require('./server/config/passport')(passport);
+
+// calling routes
 app.use('/api/v1', apiRouter);
 app.use(require("./server/routes/index"));
 app.use('/doctor', doctor);

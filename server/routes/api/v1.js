@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Patient = require('../../models/patient');
+// var Patient = require('../../models/patient');
 var Doctor = require('../../models/doctor')
 
 router.get('/doctors', (req, res, next) => {
